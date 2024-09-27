@@ -1,0 +1,185 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* box-sizing: border-box; */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #fff;
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+#cursor{
+    height: 20px;
+    width: 20px;
+    background-color: #95c11e;
+    position:fixed;
+    border-radius: 50%;
+    z-index: 99;
+}
+#cursor-blur{
+    height: 300px;
+    width: 300px;
+    background-color: #bce84379;
+    position:fixed;
+    border-radius: 50%;
+filter: blur(50px);
+z-index: 9;
+}
+
+#nav{
+    height: 150px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    /* padding: 0 145px; */
+    /* gap: 50px; */
+    /* justify-content: flex-start; */
+    justify-content: space-between;
+
+    position: fixed;
+    z-index: 99;
+    transition: linear;
+    
+}
+#nav img{
+    height: 75px;
+    padding-left: 30px;
+}
+#nav h4{
+    text-transform: uppercase;
+    font-weight: 500px;
+    padding-right: 30px;
+}
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+    /* background-color: red; */
+}
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.37);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 10;
+    /* background-color: red; */
+}
+#page1 h1{
+    font-size: 120px;
+    font-weight: 900;
+    position: relative;
+   
+}
+#page1 h1::before{
+    content:"EAT. DRINK. PLAY.";
+    position: absolute;
+    color: black;
+    top: -4px;
+    left: -4px;
+    -webkit-text-stroke: 1px #95c11e;
+    z-index: -1;
+}
+#page1 h2{
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+#page1 p{
+    font-size: 15px;
+    font-weight: 400;
+    width: 40%;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller{
+    /* background-color: red; */
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+#scroller h4{
+    display: inline-block;
+    font-size: 100px;
+    font-weight: 900;
+    /* font-family: 'Fran; */
+    margin-right: 30px;
+    transition: all linear 0.5s;
+    color: transparent;
+    -webkit-text-stroke: 2px #95c11e;
+    text-transform: uppercase;
+}
+#scroller h4:hover{
+    color: #95c11e;
+}
+
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration:20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{transform: translateX(-100%);
+    }
+}
+
+#about-us{
+    height: 70vh;
+    width: auto;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px 0 50px;
+}
+#about-us img{
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+#about-us-in{
+    width: 40%;
+    text-align: center;
+
+}
+#about-us-in h3{
+    font-size: 50px;
+    font-weight: 900;
+    margin-bottom: 30px;
+
+}
+#about-us-in p{
+    font-size: 20px;
+    line-height: 26px;
+}
